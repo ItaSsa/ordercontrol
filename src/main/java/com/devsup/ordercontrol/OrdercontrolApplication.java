@@ -19,7 +19,9 @@ public class OrdercontrolApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Order order = new Order(1034,150.00,20.00);
+		//Order order = new Order(1034,150.00,20.00);
+		Order order = new Order(2282,800.00,10.00);
+
 		System.out.println(orderService.total(order));
 	}
 }
