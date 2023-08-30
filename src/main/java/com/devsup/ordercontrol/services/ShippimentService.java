@@ -8,14 +8,12 @@ public class ShippimentService {
 
     public Double shipment(Order order){
 
-        if(order.getBasic()<100.00){
-            return 20.00;
-        }
+        Double ship = (order.getBasic()<100.00) 
+        		? 20.00
+        		: (order.getBasic()>=100 && order.getBasic()<200.00) 
+        			? 12.00
+        			:0.00;
 
-        if(order.getBasic()>=100 && order.getBasic()<200.00){
-            return 12.00;
-        }
-
-        return 0.00;
+        return ship;
     }
 }
